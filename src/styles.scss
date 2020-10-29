@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+.copyright {
+  background-color: lightgray;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active,
+.nav-link:hover {
+  background-color: #666;
+  color: white;
+}
+
+.ng-touched:not(form) {
+  border: 3px solid lightblue;
+}
+
+.ng-dirty.ng-valid:not(form) {
+  border: 2px solid #28a745;
+}
+
+.ng-dirty.ng-invalid:not(form) {
+  border: 2px solid red;
+}

@@ -1,0 +1,81 @@
+<nav class="nav justify-content-center mb-5">
+  <a [routerLink]="[ '/heroes' ]" class="nav-link" routerLinkActive="active">Heroes</a>
+  
+  <a [routerLink]="[ '/about' ]" class="nav-link" routerLinkActive="active">About</a>
+
+  <a [routerLink]="[ '/login' ]" class="nav-link" routerLinkActive="active">Login</a>
+  <a [routerLink]="[ '/reactive-login' ]" class="nav-link" routerLinkActive="active">reactive login</a>
+  <a [routerLink]="[ '/hero' ]" class="nav-link" routerLinkActive="active">Hero</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>{{title | uppercase }}</p>
+
+
+<app-key-logger></app-key-logger>
+
+<app-hero-list></app-hero-list> -->
+<!-- <router-outlet></router-outlet> -->
+
+
+
+<!-- 
+<app-hero [name]="hero?.name" (liked)="onLike()" #appHero></app-hero>
+<br />
+<span>{{ appHero.name }}</span>
+
+<ul>
+  <li *ngFor="let hero of heroes | sort:'name'; index as myIndex; trackBy: trackByHeroes">
+    <div [ngSwitch]="hero.team">
+      <div *ngSwitchCase="'avengers'">{{ hero.name }} is avenger</div>
+      <div *ngSwitchCase="'villains'">{{ hero.name }} is villain</div>
+      <div *ngSwitchDefault>{{ hero.name }}</div>
+    </div>    
+
+  </li>
+</ul>
+
+<p>{{ 100 | percent }}</p>
+
+<p>{{0.1234 | percent}}</p>
+
+<p>{{ "variable" | slice:1:3 }}</p>
+
+<p>{{today | date: 'dd/MM/yyyy'}}</p>
+
+<p>{{ heroes | json }}</p>
+
+<button type="button" (click)="addHero()">Add a hero</button>
+
+<p appCopyright></p>
+
+<p appHighlight highlightColor="red">Highlight me!</p>
+<p appHighlight [highlightColor]="'blue'">Highlight me!</p>
+<p appHighlight defaultColor="violet">Highlight me!</p>
+
+<input type="text" name="test" id="test" appNumeric>
+
+<div *appPermission="['admin', 'agent']">
+  Testing permission
+</div>
+
+<br/>
+<app-hero-list></app-hero-list> -->

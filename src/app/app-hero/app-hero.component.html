@@ -1,0 +1,10 @@
+app hero works
+<button type="button" (click)="liked.emit()">Liked</button>
+
+<ng-container *ngIf="name === 'Boothstomper'; else elseTemplate">
+    <p>{{name}} hero works!</p>
+</ng-container>
+<ng-template #elseTemplate>
+    <p>Hero was not found</p>
+</ng-template>
+

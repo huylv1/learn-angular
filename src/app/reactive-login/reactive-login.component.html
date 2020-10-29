@@ -1,0 +1,91 @@
+<div class="container" style="max-width: 40%">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form-group row">
+      <label for="username" class="col-sm-12 col-form-label">Username</label>
+      <div class="col-sm-12">
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          id="username"
+          placeholder=""
+          formControlName="username"
+          required
+        />
+
+        <span
+          class="help-block"
+          *ngIf="
+            loginForm.get('username').touched &&
+            loginForm.get('username').errors?.required
+          "
+          >The username is required</span
+        >
+        <span
+          class="help-block"
+          *ngIf="
+            loginForm.get('username').touched &&
+            loginForm.get('username').errors?.maxlength
+          "
+          >The username max length is
+          {{ loginForm.get("username").errors?.maxlength.requiredLength }}</span
+        >
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="password" class="col-sm-12 col-form-label">Password</label>
+      <div class="col-sm-12">
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          id="password"
+          placeholder=""
+          formControlName="password"
+          required
+        />
+        <span
+          class="help-block"
+          *ngIf="
+            loginForm.get('password').touched &&
+            loginForm.get('password').errors?.required
+          "
+          >The password is required</span
+        >
+        <span
+          class="help-block"
+          *ngIf="
+            loginForm.get('password').touched &&
+            loginForm.get('password').errors?.minlength
+          "
+          >The password is too short</span
+        >
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-12">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="loginForm.invalid"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<hr />
+errors:
+<div class="form-error-message">
+  username: {{ loginForm.get("username").errors | json }}
+</div>
+<div class="form-error-message">
+  password: {{ loginForm.get("password").errors | json }}
+</div>
+<hr />
+
+<div>
+  You are trying to login as<b>{{ loginForm.controls.username.value }}</b>
+</div>

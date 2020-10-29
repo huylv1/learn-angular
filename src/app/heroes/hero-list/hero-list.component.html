@@ -1,0 +1,51 @@
+<!-- <h3>My heroes</h3>
+<ul>
+  <li *ngFor="let hero of heroes">
+    <app-hero-detail [id]="hero.id" [name]="hero.name"></app-hero-detail>
+    <a [routerLink]="['/heroes', hero.id]">{{hero.name}}</a>    
+  </li>
+</ul>
+
+<div>
+  <button (click)="add('Thudread')">Add Thudread</button>
+</div>
+
+<div>
+  <button (click)="rename(heroes[0])">Rename Boothstomper to Pricezog</button>
+</div>
+
+<div>
+  <button (click)="remove(heroes[4])">Delete Piranhaelli</button>
+</div> -->
+
+<!-- <a [routerLink]="[ '/heroes/1' ]">to detail</a> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>My heroes</h3>
+      <ul>
+        <li *ngFor="let hero of heroes">
+          <a [routerLink]="['/heroes', hero.id]">{{ hero.name }}</a>
+        </li>
+      </ul>
+
+      <div>
+        <button type="button" class="btn btn-primary" (click)="add('Thudread')">Add Thudread</button>
+      </div>
+
+      <div>
+        <button type="button" class="btn btn-primary" (click)="rename(heroes[0])">Rename Boothstomper to Pricezog</button>
+      </div>
+
+      <div>
+        <button type="button" (click)="remove(heroes[4])" class="btn btn-primary">Delete Piranhaelli</button>
+      </div>
+    </div>
+
+    <div class="col-sm-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
